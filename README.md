@@ -11,12 +11,14 @@ using Spring boot Quartz And Mail server
 #### Add new Scheduler 
 
 ```http
-  GET /job/add/${name}
+  POST /job/add
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `Name` | `string` | **Required**. Your Job name |
+| `jobName` | `string` | **Required**. Your Job name |
+| `description` | `string` | **Required**. Your Job description |
+| `cronExpression` | `string` | **Required**. Your Job cronExpression |
 
 #### Susspand Job
 
